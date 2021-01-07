@@ -1,0 +1,7 @@
+{
+  "name": "my-little-robot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Samuel Vandamme",
+  "license": "MIT"
+}
