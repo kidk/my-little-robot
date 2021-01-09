@@ -1,7 +1,12 @@
-const gpio = require('onoff').Gpio;
-const buzzer = new gpio(17, 'out');
+const Gpio = require('pigpio').Gpio;
 
-buzzer.writeSync(1);
+const buzzer_pin = 17;
+
+const buzzer = new Gpio(buzzer_pin, {mode: Gpio.OUTPUT});
+
+
+buzzer.digitalWrite(1);
 setTimeout(() => {
-    buzzer.writeSync(0);
+    buzzer.digitalWrite(0);
 }, 1000);
+

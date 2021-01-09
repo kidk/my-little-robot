@@ -5,7 +5,7 @@
   "author": "Samuel Vandamme",
   "license": "MIT",
   "dependencies": {
-    "onoff": "^6.0.1",
+    "pigpio": "^3.3.0",
     "rpi-ws281x-native": "^0.10.1"
   }
 }
