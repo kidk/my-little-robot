@@ -18,16 +18,21 @@ pwm = new Pca9685Driver(options, function(err) {
         pwm.channelOff(i);
     }
 
-    // 8 is horizontal movement
-    // 9 is vertical movement
-    pwm.channelOn(8);
-    pwm.channelOn(9);
-    pwm.setPulseLength(8, 2100); // Center
-    pwm.setPulseLength(9, 1300); // Center
+    // 0 is left front forward
+    // 1 is left front backward
+    // 2 is left back forward
+    // 3 is left back backward
+    // 4 is right back forward
+    // 5 is right back backward
+    // 6 is right front forward
+    // 7 is right front backward
 
-    //pwm.setPulseLength(9, 1300); // Low max
-    //pwm.setPulseLength(9, 2300); // High max
 
-    // pwm.setPulseLength(8, 1600); // Right max
-    // pwm.setPulseLength(8, 2600); // Left max
+    let channel = 1;
+    pwm.channelOn(channel);
+    pwm.setPulseLength(channel, 4095); // Center
+
+    // Speed: low end 0.2, high end 1
+    pwm.setDutyCycle(channel, 0.2);
+
 });
