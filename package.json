@@ -5,6 +5,8 @@
   "author": "Samuel Vandamme",
   "license": "MIT",
   "dependencies": {
+    "i2c-bus": "^5.2.1",
+    "pca9685": "^4.0.3",
     "pigpio": "^3.3.0",
     "rpi-ws281x-native": "^0.10.1"
   }
